@@ -1,0 +1,44 @@
+algoritmo "Gerador_de_Numeros_Aleatorios"
+// Função : Gerar 17 números aleatórios
+// Autor : Vergil
+// Data : 10/04/2007
+// Seção de Declarações var   
+
+contar, contar2 : inteiro   
+Numeros : vetor[1..17] de real   
+num : realinicio	  
+contar <- 1	  
+
+// Gerar os 17 números aleatoriamente	  
+
+enquanto contar <= 17 faca		   
+num <- rand * 20 
+
+// recebe um número aleatório entre 0 e 20 (decimal)		  
+
+ para contar2 de 1 ate contar faca 
+ 
+ // percorre todos os valores já sorteados				
+ 
+ se num <> Numeros[contar] entao 
+ 
+ // se for um número inédito, atribui ao vetor				   
+ 
+ Numeros[contar] <- num				   
+ contar <- contar + 1				   
+ interrompa
+ senao
+ interrompa 
+ 
+ // se for repetido, mandar sortear outro número
+
+ fimse
+ fimpara	  
+ fimenquanto
+ 
+ // Exibir os valores na tela	  
+ 
+ para contar de 1 ate 17 faca		   
+ escreval(Numeros[contar]:2:1)	  
+ fimpara
+ fimalgoritmo
